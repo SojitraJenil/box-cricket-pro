@@ -23,7 +23,7 @@ import TopNavbar from "../../Component/TopNavbar/TopNavbar";
 export default function ProfilePage() {
   const [userDetails, setUserDetails] = useState(null);
   const userId = localStorage.getItem("userId");
-
+  console.log('userDetails :>> ', userDetails);
   useEffect(() => {
     fetchUserDetails();
   }, []);
