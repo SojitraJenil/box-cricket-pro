@@ -1,0 +1,45 @@
+.Btn>input {
+    background-color: transparent;
+    color: #000;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 8px 25px !important;
+    margin: 0px 15px;
+    font-weight: 500;
+    transition: .3s;
+}
+
+.Btn>input:hover {
+    background-color: #60BABE !important;
+    color: white;
+}
+
+.Btn>input:active {
+    background-color: #60BABE !important;
+    color: white !important;
+}
+
+.Btn {
+    text-align: center;
+}
+
+.maintenance-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.disabled-link {
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+.blur-bg {
+    backdrop-filter: blur(5px) !important;
+    /* Adjust the blur intensity */
+    background-color: rgba(255, 255, 255, 0.3) !important;
+    /* Semi-transparent background */
+}
