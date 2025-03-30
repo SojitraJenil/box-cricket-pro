@@ -93,13 +93,13 @@ function BookedTable() {
 
     const groupByProductAndUser = (bookings: Booking[]) => {
         return bookings.reduce((acc: any, booking: Booking) => {
-            if (!acc[booking.product_id.product_name]) {
-                acc[booking.product_id.product_name] = {}
+            if (!acc[booking.product_id?.product_name]) {
+                acc[booking.product_id?.product_name] = {}
             }
-            if (!acc[booking.product_id.product_name][booking.email]) {
-                acc[booking.product_id.product_name][booking.email] = []
+            if (!acc[booking.product_id?.product_name][booking.email]) {
+                acc[booking.product_id?.product_name][booking.email] = []
             }
-            acc[booking.product_id.product_name][booking.email].push(booking)
+            acc[booking.product_id?.product_name][booking.email].push(booking)
             return acc
         }, {})
     }
@@ -150,7 +150,7 @@ function BookedTable() {
                                             <tbody>
                                                 {bookings.map((booking: Booking) => (
                                                     <tr key={booking._id} className="hover:bg-gray-50">
-                                                        <td className="px-4 py-2 border border-gray-200">{booking.product_id.product_name}</td>
+                                                        <td className="px-4 py-2 border border-gray-200">{booking?.product_id?.product_name}</td>
                                                         <td className="px-4 py-2 border border-gray-200">
                                                             <div className="text-xs mb-1">ID: {booking._id}</div>
                                                             <div className="flex flex-wrap gap-1">

@@ -7,10 +7,12 @@ import "./TopNavbar.css";
 function TopNavbar() {
   const [data, setData] = useState();
   const [name, setname] = useState(true);
+  const [email, setEmail] = useState("");
   var Navigation = useNavigate();
   useEffect(() => {
     setname(false);
     setData(JSON.parse(localStorage.getItem("name")));
+    setEmail(localStorage.getItem("userEmail"));
   }, []);
 
   const jwt = localStorage.getItem("token");
@@ -29,7 +31,8 @@ function TopNavbar() {
               <span>
                 <CampaignIcon className="me-1" />
               </span>
-              <span> Welcome back {name ? "UserName" : data}</span>
+              <span> Welcome back {name ? "UserName" : data} &nbsp;&nbsp;|</span>
+              <span className="ms-2"> {email}</span>
             </div>
             <div
               className="col-md-auto col-md-center col-12 ms-md-auto me-lg-auto me-md-auto me-xl-0 text-center ms-auto"

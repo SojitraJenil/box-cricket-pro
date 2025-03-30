@@ -132,7 +132,7 @@ const TableProd = () => {
   if (error) return;
   return (
     <>
-      <Breadcrumb pageName="Box location : )" />
+      <Breadcrumb pageName="Box Management" />
       <div className="bg-gray-300 p-4">
         <span>Search:</span>
         <input
@@ -305,7 +305,7 @@ const TableProd = () => {
               <div className="relative my-6 mx-auto text-sm mt-30 min-w-[600px] max-w-3xl">
                 <div className="border-0 rounded-lg shadow-lg relative flex flex-col bg-white outline-none focus:outline-none">
                   <div className="flex items-start justify-between p-2 border-b border-solid border-blueGray-200 rounded-t">
-                    <h3 className="text-xl font-semibold">Add Product</h3>
+                    <h3 className="text-xl font-semibold">Add Box</h3>
                     <button
                       className="p-1 ml-auto bg-transparent border-0 text-black opacity-5 float-right text-3xl leading-none font-semibold outline-none focus:outline-none"
                       onClick={() => setAddProductModel(false)}
@@ -373,7 +373,7 @@ const TableProd = () => {
                             htmlFor="Category"
                             className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                           >
-                            Category
+                            city
                           </label>
                           <select
                             onChange={HandleChange}

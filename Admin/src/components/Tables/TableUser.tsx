@@ -21,16 +21,21 @@ const TableUser: React.FC = () => {
   }, [dispatch]);
 
   const handleDelete = async (id: string) => {
+    const isConfirmed = window.confirm("Are you sure you want to delete this user?");
+
+    if (!isConfirmed) return;
+
     try {
       dispatch(IsDeleteUser(id)).then(() => {
         dispatch(fetchUsers());
-        showSnackbar('User deleted successfully!', 'success');
+        showSnackbar("User deleted successfully!", "success");
       });
     } catch (error) {
-      dispatch(setError('Failed to delete user'));
-      showSnackbar('Failed to delete user', 'error');
+      dispatch(setError("Failed to delete user"));
+      showSnackbar("Failed to delete user", "error");
     }
   };
+
 
   const handleEdit = (id: string) => {
     showSnackbar('Edit functionality not implemented yet.', 'info');
@@ -101,14 +106,14 @@ const TableUser: React.FC = () => {
                       >
                         <MdDelete />
                       </button>
-                      <button
+                      {/* <button
                         className="hover:text-primary"
                         onClick={() => {
                           handleEdit(item._id);
                         }}
                       >
                         <MdEdit />
-                      </button>
+                      </button> */}
                     </div>
                   </td>
                 </tr>

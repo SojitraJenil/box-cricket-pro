@@ -91,7 +91,7 @@ function Tournament() {
                                                     <div className="p-6 bg-slate-300 from-gray-100 to-gray-200 rounded-lg">
                                                         <h3 className="text-xl font-semibold text-gray-900 mb-4">Product Details</h3>
                                                         <p><strong>Price:</strong> ${item.product_price}</p>
-                                                        <p><strong>Stock:</strong> {item.Product_stock}</p>
+                                                        <p><strong>Price:</strong> {item.Product_stock}</p>
                                                         <p><strong>Discount Rate:</strong> {item.Product_dis_rate}%</p>
                                                         <p><strong>Rating:</strong> {item.Product_rating} ⭐</p>
 
